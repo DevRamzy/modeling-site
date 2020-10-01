@@ -103,18 +103,91 @@ header nav .list a {
 #featured .card {
     height: 50vh;
     width: 16rem;
+    text-align: center;
     background-size: cover;
     margin-left: 2rem;
     border-radius: .5rem;
 }
-#featured .card p{
-    opacity: 0;
+#featured .card h4,h5 {
+    color: whitesmoke;
+    font-weight: 500;
 }
-#featured .card:hover {
-    zoom: 1.05;
-    transition: ease-in;
+#featured .card-content {
+    visibility: hidden;
 }
-
+#featured .card-content p {
+    color: whitesmoke;
+    margin-bottom: 8rem;
+    margin-top: 2rem;
+}
+#featured .card button {
+    width: 7rem;
+    height: 2rem;
+    font-weight: 500;
+    color: whitesmoke;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: .7rem;
+    margin-left: 2rem;
+    z-index: 1;
+}
+#featured .card:hover .card-content {
+    transform: translatez(.6rem);
+    background-color: rgba(72, 72, 72, 0.809);
+    height: 95%;
+    width: 95%;
+    border-radius: .5rem;
+    margin:.5rem 0 0 .3rem ;
+    visibility: visible;
+}
 /* ====================
 # End of Featured Section
+========================*/
+
+/* ====================
+# About Section
+========================*/
+#about {
+    height: 80vh;
+    background-size: cover;
+}
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(58, 58, 58, 0.412);
+    height: 80vh;
+    z-index: 2;
+    top: 170vh;
+}
+#about .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    padding: 3rem;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    height: 50vh;
+}
+#about .content h2, #about .content p {
+    color: whitesmoke;
+}
+#about .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.356);
+    height: 80vh;
+    z-index: 3;
+    margin-left: 3rem;
+    padding: 2rem;
+}
+#about .slider .carousel-item {
+    height: 70%;
+    size: cover;
+}
+/* ====================
+# End of About Section
 ========================*/
